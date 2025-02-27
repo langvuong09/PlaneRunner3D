@@ -62,17 +62,49 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Assets\PlaneRunner\Scripts\UI\UIControl.cs" />
+    <Compile Include="Assets\PlaneRunner\Scripts\Manager\AudioManager.cs" />
     <Compile Include="Assets\PlaneRunner\Scripts\Gameplay\CameraControl.cs" />
+    <Compile Include="Assets\PlaneRunner\Scripts\Manager\GameManager.cs" />
+    <Compile Include="Assets\PlaneRunner\Scripts\Manager\RankManager.cs" />
+    <Compile Include="Assets\PlaneRunner\Scripts\Manager\UIManager.cs" />
+    <Compile Include="Assets\PlaneRunner\Scripts\Manager\AudioMixedManager.cs" />
     <Compile Include="Assets\PlaneRunner\Scripts\Gameplay\ObstaclePack.cs" />
+    <Compile Include="Assets\PlaneRunner\Scripts\Manager\PointManager.cs" />
     <Compile Include="Assets\PlaneRunner\Scripts\UI\CanvasSizeFix.cs" />
     <Compile Include="Assets\PlaneRunner\Scripts\Gameplay\RoadCreator.cs" />
     <Compile Include="Assets\PlaneRunner\Scripts\UI\GameUI.cs" />
     <Compile Include="Assets\TutorialInfo\Scripts\Readme.cs" />
-    <Compile Include="Assets\PlaneRunner\Scripts\UI\WinUI.cs" />
     <Compile Include="Assets\PlaneRunner\Scripts\Gameplay\RoadPart.cs" />
+    <Compile Include="Assets\PlaneRunner\Scripts\UI\UILoadScene.cs" />
     <Compile Include="Assets\PlaneRunner\Scripts\UI\LoseUI.cs" />
     <Compile Include="Assets\PlaneRunner\Scripts\Gameplay\PlayerPlane.cs" />
     <Compile Include="Assets\PlaneRunner\Scripts\Gameplay\GameControl.cs" />
+    <Compile Include="Assets\PlaneRunner\Scripts\Manager\PauseManager.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Assets\TextMesh Pro\Shaders\TMPro.cginc" />
+    <None Include="Assets\TextMesh Pro\Shaders\TMP_SDF-Mobile Overlay.shader" />
+    <None Include="Assets\TextMesh Pro\Shaders\TMP_SDF-Mobile-2-Pass.shader" />
+    <None Include="Assets\TextMesh Pro\Shaders\TMP_Bitmap.shader" />
+    <None Include="Assets\TextMesh Pro\Shaders\TMPro_Mobile.cginc" />
+    <None Include="Assets\TextMesh Pro\Shaders\TMP_SDF SSD.shader" />
+    <None Include="Assets\TextMesh Pro\Shaders\TMP_SDF-Surface-Mobile.shader" />
+    <None Include="Assets\TextMesh Pro\Shaders\SDFFunctions.hlsl" />
+    <None Include="Assets\TextMesh Pro\Shaders\TMP_SDF-Surface.shader" />
+    <None Include="Assets\Sprites\EmojiOne Attribution.txt" />
+    <None Include="Assets\TextMesh Pro\Shaders\TMP_Bitmap-Custom-Atlas.shader" />
+    <None Include="Assets\TextMesh Pro\Shaders\TMP_SDF.shader" />
+    <None Include="Assets\TextMesh Pro\Shaders\TMP_SDF-Mobile SSD.shader" />
+    <None Include="Assets\TextMesh Pro\Resources\LineBreaking Leading Characters.txt" />
+    <None Include="Assets\TextMesh Pro\Shaders\TMPro_Properties.cginc" />
+    <None Include="Assets\TextMesh Pro\Shaders\TMPro_Surface.cginc" />
+    <None Include="Assets\TextMesh Pro\Resources\LineBreaking Following Characters.txt" />
+    <None Include="Assets\TextMesh Pro\Shaders\TMP_SDF-Mobile Masking.shader" />
+    <None Include="Assets\TextMesh Pro\Shaders\TMP_SDF Overlay.shader" />
+    <None Include="Assets\TextMesh Pro\Shaders\TMP_Bitmap-Mobile.shader" />
+    <None Include="Assets\TextMesh Pro\Fonts\LiberationSans - OFL.txt" />
+    <None Include="Assets\TextMesh Pro\Shaders\TMP_SDF-Mobile.shader" />
+    <None Include="Assets\TextMesh Pro\Shaders\TMP_Sprite.shader" />
   </ItemGroup>
   <ItemGroup>
     <Reference Include="UnityEngine">

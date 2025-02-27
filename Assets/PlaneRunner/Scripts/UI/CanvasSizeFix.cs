@@ -1,28 +1,11 @@
-﻿using System.Collections;
-using System.Collections.Generic;
-using UnityEngine;
-namespace JSG.Car
+﻿using UnityEngine;
+[AddComponentMenu("TienCuong/CanvasSizeFix")]
+public class CanvasSizeFix : MonoBehaviour
 {
-    public class CanvasSizeFix : MonoBehaviour
+    void Awake()
     {
-
-        // Use this for initialization
-
-        void Awake()
-        {
-            RectTransform r = gameObject.GetComponent<RectTransform>();
-            float ratio = (float)Screen.width / (float)Screen.height;
-            r.sizeDelta = new Vector2(ratio * 1800, 1800);
-        }
-        void Start()
-        {
-
-        }
-
-        // Update is called once per frame
-        void Update()
-        {
-
-        }
+        RectTransform r = gameObject.GetComponent<RectTransform>();
+        float ratio = (float)Screen.width / (float)Screen.height;
+        r.sizeDelta = new Vector2(ratio * 1800, 1800);
     }
 }

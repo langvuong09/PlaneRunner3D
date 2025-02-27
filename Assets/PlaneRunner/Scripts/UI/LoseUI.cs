@@ -1,35 +1,16 @@
-﻿using System.Collections;
-using System.Collections.Generic;
-using UnityEngine;
-using UnityEngine.UI;
+﻿using UnityEngine;
 using UnityEngine.SceneManagement;
-
-namespace Plane.UI
+[AddComponentMenu("TienCuong/LoseUI")]
+public class LoseUI : MonoBehaviour
 {
-    public class LoseUI : MonoBehaviour
+    public void BtnRestart()
     {
-
-
-        void Start()
-        {
-          
-        }
-
-        void Update()
-        {
-
-        }
-
-
-        public void BtnRestart()
-        {
-            SceneManager.LoadScene(SceneManager.GetActiveScene().name);
-        }
-        public void BtnExit()
-        {
-
-            Application.Quit();
-        }
-
+        GameManager.Instance.ResetPoint();
+        SceneManager.LoadScene(SceneManager.GetActiveScene().name);
+    }
+    public void BtnExit()
+    {
+        Application.Quit();
     }
 }
+

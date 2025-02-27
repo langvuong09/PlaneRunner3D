@@ -1,48 +1,27 @@
-﻿using System.Collections;
-using System.Collections.Generic;
-using UnityEngine;
-
-namespace Plane.UI
+﻿using UnityEngine;
+[AddComponentMenu("TienCuong/UIControl")]
+public class UIControl : MonoBehaviour
 {
-    public class UIControl : MonoBehaviour
+    private static UIControl m_Current;
+    public static UIControl Current
+    { get { return m_Current; } }
+    public GameObject m_LoseUI;
+    public GameObject m_WinUI;
+    public GameObject m_InGameUI;
+    [SerializeField]
+    public Camera m_EventCamera;
+    void Awake()
     {
-        private static UIControl m_Current;
-        public static UIControl Current
-        { get { return m_Current; } }
+        m_Current = this;
+    }
 
-
-        public GameObject m_LoseUI;
-        public GameObject m_WinUI;
-        public GameObject m_InGameUI;
-
-
-
-        [SerializeField]
-        public Camera m_EventCamera;
-
-
-        void Awake()
+    void Start()
+    {
+        Canvas[] allCanvas = GetComponentsInChildren<Canvas>(true);
+        foreach (Canvas c in allCanvas)
         {
-            m_Current = this;
-            //m_EventCamera = GameObject.FindGameObjectWithTag("MainCamera").GetComponent<Camera>();
+            c.worldCamera = m_EventCamera;
         }
-
-        void Start()
-        {
-            Canvas[] allCanvas = GetComponentsInChildren<Canvas>(true);
-            foreach (Canvas c in allCanvas)
-            {
-                c.worldCamera = m_EventCamera;
-            }
-
-        }
-
-        // Update is called once per frame
-        void Update()
-        {
-
-        }
-
-
     }
 }
+

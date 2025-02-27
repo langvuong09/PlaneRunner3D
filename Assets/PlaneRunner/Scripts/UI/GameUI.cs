@@ -1,32 +1,9 @@
-﻿using System.Collections;
-using System.Collections.Generic;
-using UnityEngine;
-using UnityEngine.UI;
-using UnityEngine.SceneManagement;
-
-namespace Plane.UI
+﻿using UnityEngine;
+[AddComponentMenu("TienCuong/GameUI")]
+public class GameUI : MonoBehaviour
 {
-    public class GameUI : MonoBehaviour
+    public void BtnExit()
     {
-      
-
-        // Start is called before the first frame update
-        void Start()
-        {
-
-        }
-
-        // Update is called once per frame
-        void Update()
-        {
-           
-        }
-
-
-        public void BtnExit()
-        {
-            Application.Quit();
-        }
-
+        Application.Quit();
     }
 }

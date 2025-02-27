@@ -1,60 +1,42 @@
-﻿using System.Collections;
-using System.Collections.Generic;
-using UnityEngine;
-using Plane.UI;
+﻿using UnityEngine;
 
-namespace Plane.Gameplay
+[AddComponentMenu("TienCuong/GameControl")]
+public class GameControl : MonoBehaviour
 {
-    public class GameControl : MonoBehaviour
+    public static GameControl m_Current;
+    [HideInInspector]
+    public int m_GameState = 0;
+    public const int State_Start = 0;
+    public const int State_Chase = 1;
+    public const int State_Shoot = 2;
+    public const int State_Win = 3;
+    public const int State_Lose = 4;
+    [HideInInspector]
+    public float State_Timer = 0;
+    public Transform m_SpeedParticle;
+    public float m_GameSpeed = 100;
+    void Awake()
     {
-        public static GameControl m_Current;
+        m_Current = this;
+    }
+    // Start is called before the first frame update
+    void Start()
+    {
+        m_GameState = State_Start;
 
-        [HideInInspector]
-        public int m_GameState = 0;
-        public const int State_Start = 0;
-        public const int State_Chase = 1;
-        public const int State_Shoot = 2;
-        public const int State_Win = 3;
-        public const int State_Lose = 4;
-        [HideInInspector]
-        public float State_Timer = 0;
-
-        public Transform m_SpeedParticle;
-
-        public float m_GameSpeed = 100;
-
-        void Awake()
-        {
-            m_Current = this;
-        }
-        // Start is called before the first frame update
-        void Start()
-        {
-            m_GameState = State_Start;
-
-        }
-
-        // Update is called once per frame
-        void Update()
-        {
-            State_Timer += Time.deltaTime;
+    }
+    // Update is called once per frame
+    void Update()
+    {
+        State_Timer += Time.deltaTime;
             
-        }
-
-        public void HandleGameOver()
-        {
-            m_GameSpeed = 0;
-            m_SpeedParticle.gameObject.SetActive(false);
-            CameraControl.Current.m_ShakeEnabled = false;
-            UIControl.Current.m_InGameUI.SetActive(false);
-            UIControl.Current.m_LoseUI.SetActive(true);
-        }
-
-        public void HandleWin()
-        { 
-
-        }
-
-
+    }
+    public void HandleGameOver()
+    {
+        m_GameSpeed = 0;
+        m_SpeedParticle.gameObject.SetActive(false);
+        CameraControl.Current.m_ShakeEnabled = false;
+        UIControl.Current.m_InGameUI.SetActive(false);
+        UIControl.Current.m_LoseUI.SetActive(true);
     }
 }
